@@ -28,7 +28,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["🏋️ Lifts", "🍎 Food AI", "💧 Water",
 # --- TAB 1: WORKOUTS ---
 with tab1:
     st.subheader("Log Your Sets")
-    exercise = st.selectbox("Exercise", ["Bench Press", "Squats", "Deadlift", "Overhead Press", "Rows", "Lat Pulldown"])
+    exercise = st.selectbox("Exercise", ["Bench Press", "Dumbell Flys", "Bulgarian Split Squats", "Leg Extension", "RDL", "Squats", "Deadlift", "Overhead Press", "Lateral Raise", "Rows", "Wide Lat Pulldown", "Close Grip Pulldown", "Hyperextension", "Chest Supported Rows" "Incline Curls", "Preacher Curls", "Hammer Curls", "Triceps Pushdowns", "Overhead Triceps Extension", "Cable Crunches"])
     col1, col2 = st.columns(2)
     with col1:
         weight = st.number_input("Weight (kg)", value=60, step=1)
