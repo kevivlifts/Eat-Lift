@@ -5,7 +5,7 @@ from datetime import datetime
 # 1. Setup Gemini (Get your free key at aistudio.google.com)
 # Secure way to load the key
 genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 st.set_page_config(page_title="Monte Linzor Tracker", layout="centered")
 
