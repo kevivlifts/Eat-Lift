@@ -46,8 +46,18 @@ with tab2:
     if st.button("Analyze with Gemini", use_container_width=True):
         with st.spinner("Calculating..."):
             prompt = "Estimate calories and protein for this meal. Be very brief."
-            response = model.generate_content([prompt, img_file] if img_file else prompt)
+            
+            # Logic to handle the image file correctly
+            if img_file:
+                # Convert the uploaded file to bytes for Gemini
+                image_data = img_file.getvalue()
+                image_parts = [{"mime_type": img_file.type, "data": image_data}]
+                response = model.generate_content([prompt, image_parts[0]])
+            else:
+                response = model.generate_content(prompt)
+                
             st.info(response.text)
+
 
 # --- TAB 3: WATER TRACKER ---
 with tab3:
